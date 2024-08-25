@@ -31,12 +31,16 @@ const Portfolio: React.FC = () => {
   const projects = [
     {
       title: 'Derouge',
+      link: 'https://273.media/derouge/',
       images: [valuag],
       technologies: [
-        { name: 'Javascript', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg' },
+        { name: 'Java', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg' },
+        { name: 'Spring Boot', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg' },
         { name: 'React', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg' },
+        { name: 'React Native', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg' },
+        { name: 'Swift', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg' },
       ],
-      description: '273 Media'
+      description: 'During my free-time and weekends I am helping my friend build a mobile app for his startup. We are using React Native and Expo for Android and SwiftUI for iOS. Responsibilities include frontend implementation and backend code review, leveraging my full-stack expertise to ensure code quality and architectural consistency.'
     },
     {
       title: 'EQUMAS Quality Management System',
@@ -49,7 +53,7 @@ const Portfolio: React.FC = () => {
         { name: 'SQL Server', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/microsoftsqlserver/microsoftsqlserver-plain.svg' },
         { name: 'Microsoft Azure', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/azure/azure-original.svg' },
       ],
-      description: 'Led full-stack development using ASP.NET Core, React, and RESTful APIs.'
+      description: 'Leading the full-stack development using ASP.NET Core, React, and RESTful APIs.'
     },
     {
       title: 'Innovatist Data Hub',
@@ -86,7 +90,7 @@ const Portfolio: React.FC = () => {
         { name: 'AWS EC2', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' },
         { name: 'AWS RDS MySQL', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg' },
       ],
-      description: 'Led the development of a dynamic web application to digitize internal quality metric forms. Implemented using HTML, PHP, WordPress, and AWS services.',
+      description: 'Helped the development of a dynamic web application to digitize internal quality metric forms. Implemented using HTML, PHP, WordPress, and AWS services.',
     },
   ];
 
@@ -177,7 +181,25 @@ const Portfolio: React.FC = () => {
               </Swiper>
               <CardContent>
                 <Typography variant="h5" gutterBottom>
-                  {project.title}
+                  {project.link ? (
+                    <Link 
+                      href={project.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      sx={{ 
+                        color: 'primary.main', 
+                        fontWeight: 'bold',
+                        textDecoration: 'none', 
+                        '&:hover': { 
+                          textDecoration: 'underline' 
+                        } 
+                      }}
+                    >
+                      {project.title}
+                    </Link>
+                  ) : (
+                    project.title
+                  )}
                 </Typography>
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 2 }}>
                   {project.technologies.map((tech, techIndex) => (
