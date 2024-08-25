@@ -113,41 +113,8 @@ const Home: React.FC = () => {
 // Delivering business value through code`}
             </pre>
           </Box>
-          <Box sx={{ mt: 2 }}>
-            <Button
-              variant="contained"
-              startIcon={<LinkedInIcon />}
-              href="https://www.linkedin.com/in/aralsen"
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{ ...buttonStyle, mr: 2, mb: 2 }}
-            >
-              LinkedIn
-            </Button>
-            <Button
-              variant="contained"
-              startIcon={<GitHubIcon />}
-              href="https://github.com/aralsen"
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{ ...buttonStyle, mr: 2, mb: 2 }}
-            >
-              GitHub
-            </Button>
-            <Button
-              variant="contained"
-              startIcon={<DescriptionIcon />}
-              href={aralResume}
-              target="_blank"
-              rel="noopener noreferrer"
-              download="Aral_Sen_Resume.pdf"
-              sx={{ ...buttonStyle, mb: 2 }}
-            >
-              Resume
-            </Button>
-          </Box>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <Box
             component="img"
             src={aralImage}
@@ -158,8 +125,42 @@ const Home: React.FC = () => {
               height: 'auto',
               borderRadius: '50%',
               boxShadow: '0 0 20px rgba(33, 150, 243, 0.3)',
+              marginBottom: 3,
             }}
           />
+          <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 2 }}>
+            <Button
+              variant="contained"
+              startIcon={<LinkedInIcon />}
+              href="https://www.linkedin.com/in/aralsen"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={buttonStyle}
+            >
+              LinkedIn
+            </Button>
+            <Button
+              variant="contained"
+              startIcon={<GitHubIcon />}
+              href="https://github.com/aralsen"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={buttonStyle}
+            >
+              GitHub
+            </Button>
+            <Button
+              variant="contained"
+              startIcon={<DescriptionIcon />}
+              href={aralResume}
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Aral_Sen_Resume.pdf"
+              sx={buttonStyle}
+            >
+              Resume
+            </Button>
+          </Box>
         </Grid>
       </Grid>
     </Box>
