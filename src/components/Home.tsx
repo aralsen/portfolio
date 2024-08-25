@@ -3,6 +3,8 @@ import { Typography, Box, Grid, Button } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import DescriptionIcon from '@mui/icons-material/Description';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Typewriter from 'typewriter-effect';
 import aralImage from '../assets/aral.png';
 import aralResume from '../assets/Aral_Sen_Resume.pdf';
@@ -40,6 +42,33 @@ const Home: React.FC = () => {
     },
   };
 
+  const codeString = `const aral = {
+  role: "Full-Stack Software Engineer",
+  location: "Philadelphia, PA, USA",
+  education: {
+    university: [
+      "Binghamton University",
+      "Istanbul Technical University"
+    ],
+    degree: [
+      "B.S. Computer Science",
+      "B.S. Information Systems Engineering"
+    ],
+    award: [
+      "Mine Kalkan Academic Excellence Award",
+      "Dean's List"
+    ]
+  },
+  skills: [
+    "Web Development",
+    "Performance Optimization",
+    "High-Quality Code",
+    "Impactful Solutions"
+  ]
+};
+
+// Delivering business value through code`;
+
   return (
     <Box sx={{ flexGrow: 1, mt: 4 }}>
       <Grid container spacing={4} alignItems="center">
@@ -74,47 +103,48 @@ const Home: React.FC = () => {
           </Box>
           <Box 
             sx={{ 
-              backgroundColor: '#f5f5f5',
               borderRadius: '8px',
-              padding: '1rem',
-              fontFamily: 'monospace',
-              fontSize: { xs: '0.9rem', md: '1rem' },
-              lineHeight: 1.6,
-              color: '#333333',
               marginBottom: '1.5rem',
               position: 'relative',
+              maxWidth: '100%',
               '&::before': {
                 content: '"// About Me"',
                 position: 'absolute',
-                top: '-1.5rem',
-                left: '0',
-                color: '#757575',
-                fontSize: '0.9rem',
+                top: '0.5rem',
+                left: '1rem',
+                color: '#abb2bf',
+                fontSize: '0.8rem',
+                zIndex: 1,
               }
             }}
           >
-            <pre style={{ whiteSpace: 'pre-wrap', wordWrap: 'break-word' }}>
-              {`const aral = {
-  role: "Full-Stack Software Engineer",
-  location: "Philadelphia, PA, USA",
-  education: {
-    university: ["Binghamton University", "Istanbul Technical University"],
-    degree: ["B.S. Computer Science", "B.S. Information Systems Engineering"],
-    award: ["Mine Kalkan Academic Excellence Award", "Dean's List"]
-  },
-  skills: [
-    "Web Development",
-    "Performance Optimization",
-    "High-Quality Code",
-    "Impactful Solutions"
-  ]
-};
-
-// Delivering business value through code`}
-            </pre>
+            <SyntaxHighlighter 
+              language="javascript" 
+              style={atomOneDark}
+              customStyle={{
+                padding: '1.5rem 1rem 1rem',
+                fontSize: '0.75rem',
+                lineHeight: 1.4,
+                height: 'auto',
+                borderRadius: '8px',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+                whiteSpace: 'pre-wrap',
+                wordBreak: 'break-word',
+                overflowWrap: 'break-word',
+                background: '#282c34'
+              }}
+              wrapLines={true}
+              wrapLongLines={true}
+            >
+              {codeString}
+            </SyntaxHighlighter>
           </Box>
         </Grid>
-        <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <Grid item xs={12} md={6} sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center'
+        }}>
           <Box
             component="img"
             src={aralImage}
