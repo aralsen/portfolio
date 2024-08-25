@@ -106,7 +106,7 @@ const Portfolio: React.FC = () => {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             letterSpacing: '-0.02em',
-            marginBottom: '0.5rem',
+            marginBottom: '2rem',
           }}
         >
           My Portfolio

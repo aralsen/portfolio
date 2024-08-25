@@ -11,8 +11,8 @@ import { keyframes } from '@mui/system';
 
 import Home from './components/Home.tsx';
 import Portfolio from './components/Portfolio.tsx';
-import Contact from './components/Contact.tsx';
 import Technologies from './components/Technologies.tsx';
+import Footer from './components/Contact.tsx';
 
 const blink = keyframes`
   0% { opacity: 1; }
@@ -84,8 +84,8 @@ function App() {
         <Box sx={{ minHeight: '80vh', pt: 4, display: 'flex', flexDirection: 'column', justifyContent: 'center' }} ref={technologiesRef}>
           <Technologies />
         </Box>
-        <Box sx={{ minHeight: '50vh', pt: 4, display: 'flex', flexDirection: 'column', justifyContent: 'center' }} ref={contactRef}>
-          <Contact />
+        <Box sx={{ pt: 4, pb: 4 }} ref={contactRef}>
+          <Footer />
         </Box>
       </Container>
     </ThemeProvider>

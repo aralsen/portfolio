@@ -43,15 +43,41 @@ const Home: React.FC = () => {
     <Box sx={{ flexGrow: 1, mt: 4 }}>
       <Grid container spacing={4} alignItems="center">
         <Grid item xs={12} md={6}>
-          <Typography variant="h2" component="h1" gutterBottom>
+          <Typography 
+            variant="h1" 
+            component="h1" 
+            sx={{
+              fontWeight: 700,
+              fontSize: { xs: '2.5rem', md: '3.75rem' },
+              color: '#000000',
+              letterSpacing: '-0.02em',
+              marginBottom: '0.5rem',
+            }}
+          >
             Hi, I'm <span style={{ color: '#2196F3' }}>Aral</span>
           </Typography>
-          <Typography variant="h5" gutterBottom>
-            Software Engineer at <a href="https://equmas.com" target="_blank" rel="noopener noreferrer" style={{ color: '#2196F3', textDecoration: 'none' }}>EQUMAS</a>
+          <Typography 
+            variant="h2" 
+            sx={{
+              fontWeight: 600,
+              fontSize: { xs: '1.5rem', md: '2rem' },
+              color: '#757575',
+              marginBottom: '1rem',
+            }}
+          >
+            Software Engineer at <Box component="span" sx={{ color: '#2196F3' }}>EQUMAS</Box>
           </Typography>
-          <Typography variant="body1" paragraph>
-            Full-stack developer with experience in ASP.NET Core, React, and AWS. Passionate about building efficient and scalable applications.
-          </Typography>
+          <Typography 
+            variant="body1" 
+            sx={{
+              fontSize: { xs: '1rem', md: '1.1rem' },
+              lineHeight: 1.6,
+              color: '#333333',
+              marginBottom: '1.5rem',
+            }}
+          >
+            I'm a Full-Stack Software Engineer based in Philadelphia, specializing in ASP.NET Core and React development. A Binghamton University graduate and recipient of the Mine Kalkan Academic Excellence Award, I bring a blend of academic rigor and practical experience to every challenge. My expertise spans from web development to performance optimization, consistently delivering high-quality code and impactful solutions that drive business value.
+          </Typography> 
           <Box sx={{ mt: 2 }}>
             <Button
               variant="contained"
