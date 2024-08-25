@@ -3,6 +3,7 @@ import { Typography, Box, Grid, Button } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import DescriptionIcon from '@mui/icons-material/Description';
+import Typewriter from 'typewriter-effect';
 import aralImage from '../assets/aral.png';
 import aralResume from '../assets/Aral_Sen_Resume.pdf';
 
@@ -56,28 +57,62 @@ const Home: React.FC = () => {
           >
             Hi, I'm <span style={{ color: '#2196F3' }}>Aral</span>
           </Typography>
-          <Typography 
-            variant="h2" 
-            sx={{
-              fontWeight: 600,
-              fontSize: { xs: '1.5rem', md: '2rem' },
-              color: '#757575',
-              marginBottom: '1rem',
-            }}
-          >
-            Software Engineer at <Box component="span" sx={{ color: '#2196F3' }}>EQUMAS</Box>
-          </Typography>
-          <Typography 
-            variant="body1" 
-            sx={{
-              fontSize: { xs: '1rem', md: '1.1rem' },
+          <Box sx={{ 
+            fontFamily: 'monospace', 
+            fontSize: { xs: '1.2rem', md: '1.5rem' }, 
+            color: '#757575', 
+            marginBottom: '1rem',
+            height: '2em',
+          }}>
+            <Typewriter
+              options={{
+                strings: ['Software Engineer at EQUMAS', 'Full-Stack Developer'],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </Box>
+          <Box 
+            sx={{ 
+              backgroundColor: '#f5f5f5',
+              borderRadius: '8px',
+              padding: '1rem',
+              fontFamily: 'monospace',
+              fontSize: { xs: '0.9rem', md: '1rem' },
               lineHeight: 1.6,
               color: '#333333',
               marginBottom: '1.5rem',
+              position: 'relative',
+              '&::before': {
+                content: '"// About Me"',
+                position: 'absolute',
+                top: '-1.5rem',
+                left: '0',
+                color: '#757575',
+                fontSize: '0.9rem',
+              }
             }}
           >
-            I'm a Full-Stack Software Engineer based in Philadelphia, specializing in ASP.NET Core and React development. A Binghamton University graduate and recipient of the Mine Kalkan Academic Excellence Award, I bring a blend of academic rigor and practical experience to every challenge. My expertise spans from web development to performance optimization, consistently delivering high-quality code and impactful solutions that drive business value.
-          </Typography> 
+            <pre style={{ whiteSpace: 'pre-wrap', wordWrap: 'break-word' }}>
+              {`const aral = {
+  role: "Full-Stack Software Engineer",
+  location: "Philadelphia, PA, USA",
+  education: {
+    university: ["Binghamton University", "Istanbul Technical University"],
+    degree: ["B.S. Computer Science", "B.S. Information Systems Engineering"],
+    award: ["Mine Kalkan Academic Excellence Award", "Dean's List"]
+  },
+  skills: [
+    "Web Development",
+    "Performance Optimization",
+    "High-Quality Code",
+    "Impactful Solutions"
+  ]
+};
+
+// Delivering business value through code`}
+            </pre>
+          </Box>
           <Box sx={{ mt: 2 }}>
             <Button
               variant="contained"
