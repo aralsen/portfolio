@@ -26,14 +26,15 @@ import taskly6 from '../assets/taskly6.jpeg';
 import taskly7 from '../assets/taskly7.jpeg';
 import taskly8 from '../assets/taskly8.jpeg';
 import derouge from '../assets/derouge.png';
-
+import derouge1 from '../assets/derouge1.png';
+import derouge2 from '../assets/derouge2.png';
 
 const Portfolio: React.FC = () => {
   const projects = [
     {
       title: 'Derouge',
       link: 'https://273.media/derouge/',
-      images: [derouge],
+      images: [derouge, derouge1, derouge2],
       technologies: [
         { name: 'Java', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg' },
         { name: 'Spring Boot', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg' },
