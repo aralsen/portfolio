@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.f5d73c50.css",
-    "main.js": "/portfolio/static/js/main.9b9d722c.js",
+    "main.js": "/portfolio/static/js/main.6928b053.js",
     "static/js/453.ace21015.chunk.js": "/portfolio/static/js/453.ace21015.chunk.js",
     "static/media/innovatist.png": "/portfolio/static/media/innovatist.bbe46f7bd1780013a3fa.png",
     "static/media/derouge2.png": "/portfolio/static/media/derouge2.624db3c479099adece6e.png",
     "static/media/derouge1.png": "/portfolio/static/media/derouge1.c6539cc9a0261ca5abce.png",
     "static/media/taskly5.jpeg": "/portfolio/static/media/taskly5.3148806dc131fe80c396.jpeg",
     "static/media/aral.png": "/portfolio/static/media/aral.eea8f75747ad9dd32fa9.png",
-    "static/media/Aral_Sen_Resume.pdf": "/portfolio/static/media/Aral_Sen_Resume.f21ae3e7002eccd034ab.pdf",
     "static/media/taskly3.jpeg": "/portfolio/static/media/taskly3.268a252f72c512146328.jpeg",
+    "static/media/Aral_Sen_Resume.pdf": "/portfolio/static/media/Aral_Sen_Resume.c37d09167cf1c66290d5.pdf",
     "static/media/equmas.png": "/portfolio/static/media/equmas.99d0b1203351647215b1.png",
     "static/media/taskly1.jpeg": "/portfolio/static/media/taskly1.9d73e845a9290ce12ee9.jpeg",
     "static/media/taskly4.jpeg": "/portfolio/static/media/taskly4.68c6fc970ab784a643a9.jpeg",
@@ -23,11 +23,11 @@
     "static/media/ef.png": "/portfolio/static/media/ef.9601fa8ce87ea1be72a3.png",
     "index.html": "/portfolio/index.html",
     "main.f5d73c50.css.map": "/portfolio/static/css/main.f5d73c50.css.map",
-    "main.9b9d722c.js.map": "/portfolio/static/js/main.9b9d722c.js.map",
+    "main.6928b053.js.map": "/portfolio/static/js/main.6928b053.js.map",
     "453.ace21015.chunk.js.map": "/portfolio/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f5d73c50.css",
-    "static/js/main.9b9d722c.js"
+    "static/js/main.6928b053.js"
   ]
 }
